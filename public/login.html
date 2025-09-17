@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main>
+    <h2>Entrar</h2>
+    <form id="form-login">
+      <label>Usuário<br><input name="username" required></label><br>
+      <label>Senha<br><input type="password" name="password" required></label><br>
+      <button type="submit">Entrar</button>
+    </form>
+    <p><a href="/register.html">Criar conta</a></p>
+    <pre id="out"></pre>
+  </main>
+  <script>
+    document.getElementById('form-login').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const form = e.target;
+      const data = { username: form.username.value, password: form.password.value };
+      const res = await fetch('/api/login', { method: 'POST', headers: {'content-type':'application/json'}, body: JSON.stringify(data) });
+      const j = await res.json();
+      document.getElementById('out').textContent = JSON.stringify(j, null, 2);
+      if (j.ok) location.href = '/';
+    });
+  </script>
+</body>
+</html>

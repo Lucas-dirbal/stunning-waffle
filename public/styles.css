@@ -1,0 +1,5 @@
+body { font-family: system-ui, Arial; padding: 2rem; }
+main { max-width: 600px; margin: 0 auto; }
+pre { background:#f4f4f4; padding:1rem; }
+label { display:block; margin: .5rem 0 }
+button { margin-top: .5rem }
