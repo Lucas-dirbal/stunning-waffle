@@ -1,5 +1,23 @@
-body { font-family: system-ui, Arial; padding: 2rem; }
-main { max-width: 600px; margin: 0 auto; }
-pre { background:#f4f4f4; padding:1rem; }
-label { display:block; margin: .5rem 0 }
-button { margin-top: .5rem }
+body {
+  font-family: system-ui, Arial;
+  padding: 2rem;
+  line-height: 1.5;}
+
+main {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+pre {
+  background:#f4f4f4;
+  padding:1rem;
+}
+
+label {
+  display: block;
+  margin: 0.5rem 0;
+  font-weight: bold;}
+
+button {
+  margin-top: 0.5rem;
+}
